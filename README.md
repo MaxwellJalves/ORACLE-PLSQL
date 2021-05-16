@@ -4,7 +4,8 @@ Estudo referente as boas práticas do PLSQL - criando uma tabela para um condom�
 
 #ORACLE XE 18
 
-##PROCEDIMENTO PARA CONFIGURAR UM NOVO USUARIO
+# Configurando um novo usuário
+
 -  ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE
 -  CREATE USER dbaoracle IDENTIFIED BY dbaoracle DEFAULT TABLESPACE users;
 -  Liberando privilegios para o novo usuário.
