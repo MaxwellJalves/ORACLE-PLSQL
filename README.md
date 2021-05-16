@@ -25,8 +25,8 @@ Estudo referente as boas pr√°ticas do PLSQL - criando uma tabela para um condom√
   categoria varchar(20));
 
 
-ALTER TABLE seguimentoMercado ADD CONSTRAINT seguimentoMercado_id_pk PRIMARY KEY(id);
+- ALTER TABLE seguimentoMercado ADD CONSTRAINT seguimentoMercado_id_pk PRIMARY KEY(id);
 
-ALTER TABLE cliente ADD CONSTRAINT cliente_id_pk PRIMARY KEY (ID);
+- ALTER TABLE cliente ADD CONSTRAINT cliente_id_pk PRIMARY KEY (ID);
 
-ALTER TABLE cliente ADD CONSTRAINT cliente_segMercado_fk FOREIGN KEY(segmentoMercado_id) REFERENCES seguimentoMercado(id);
+- ALTER TABLE cliente ADD CONSTRAINT cliente_segMercado_fk FOREIGN KEY(segmentoMercado_id) REFERENCES seguimentoMercado(id);
