@@ -10,3 +10,23 @@ Estudo referente as boas práticas do PLSQL - criando uma tabela para um condom�
 -  CREATE USER dbaoracle IDENTIFIED BY dbaoracle DEFAULT TABLESPACE users;
 -  Liberando privilegios para o novo usuário.
 -  GRANT connect,resource TO dbaoracle;
+
+# Criando TABELAS para realização de testes
+
+- CREATE TABLE seguimentoMercado(id number(5),razao_social varchar2(100));
+
+- CREATE TABLE cliente(
+  id number(5),
+  razao_social varchar(100),
+  cnpj varchar2(20),
+  segmentoMercado_id number(5),
+  data_inclusao Date,
+  faturamentoPrevisto number(10,2),
+  categoria varchar(20));
+
+
+ALTER TABLE seguimentoMercado ADD CONSTRAINT seguimentoMercado_id_pk PRIMARY KEY(id);
+
+ALTER TABLE cliente ADD CONSTRAINT cliente_id_pk PRIMARY KEY (ID);
+
+ALTER TABLE cliente ADD CONSTRAINT cliente_segMercado_fk FOREIGN KEY(segmentoMercado_id) REFERENCES seguimentoMercado(id);
